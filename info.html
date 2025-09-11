@@ -1,0 +1,303 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>About</title>
+<style>
+
+*{
+  cursor: none !important;
+}
+
+.topnav{
+    font-family: 'Roboto Mono', monospace;
+    position: fixed;
+    top: 10px;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color:rgb(22, 22, 22) /*rgba(240, 248, 255, 0.3)*/;
+    border-radius: 30px;
+    padding: 12px 24px;
+    transition: background-color 0.3s ease;
+    z-index: 2000;
+    backdrop-filter: blur(12px);
+    /*-webkit-backdrop-filter: blur(12px);
+    box-shadow: 1 4px 30px rgba(0, 0, 0, 0.1); */
+    font-size: 11.5px;
+}
+.custom-cursor{
+    position:fixed;
+    width:42px;
+    height: 42px;
+    transform: scale(.45);
+    background: white;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 999999;
+    transition: transform 0.2s ease;
+}
+
+
+.topnav a {
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(207, 207, 207);
+    padding: 8px 12px;
+    text-decoration: none;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.topnav a:hover{
+    font-family: 'Roboto Mono', monospace;
+    color: #ff0101;
+    border-radius: 6px;
+}
+
+.scrolling-text{
+            
+    position: fixed;
+    bottom: -5px;
+    width: 100%;
+    background: transparent;
+    backdrop-filter: blur(6px);
+    overflow: hidden;
+    z-index: 3000;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    font-size: 14px;
+    font-family: 'Roboto Mono', monospace;
+    color: rgb(207, 207, 207);
+}
+.scrolling-inner{
+    display: inline-block;
+    white-space: nowrap;
+    animation: scroll-left 60s linear infinite;
+    padding-left: 100%;
+}
+
+@keyframes scroll-left{
+    0% {
+        transform: translateX(0%);
+    }
+    100%{
+        transform: translateX(-100%)
+    }
+}
+  body {
+    font-family: monospace;
+    line-height: 1.5;
+    padding: 0 20px;
+    background-color: rgb(22, 22, 22);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+  }
+
+  .film-container {
+    position: absolute;
+    width:90vw;
+    height: 90vh;
+    left:80px;
+    top:60px;
+    border-radius: 20px;
+    overflow: hidden;
+    z-index: 0;
+    background-color: transparent;
+    
+  }
+  .film-container video{
+    height: 90vh;
+    display: block;
+    background-color: transparent;
+  }
+  .typing-wrapper {
+    position: relative;
+    white-space: pre-wrap;
+    display: inline-block;
+    width: 50%;         
+    padding: 90px 40px; 
+    color: rgb(207, 207, 207);
+    z-index: 1;
+    font-size: 10px;
+    background-color: transparent;
+  }
+
+  .typing-left {
+    position: relative;
+    white-space: pre-wrap;
+    top:90px;
+    left: 70px;
+    display: inline-block;
+    color: rgb(207, 207, 207);
+    z-index: 1; 
+  }
+
+  .typing-right {
+    position: relative;
+    white-space: pre-wrap;
+    margin-top:50px;
+    margin-left: 650px;
+    display: inline-block;
+    color: rgb(207, 207, 207);
+    z-index: 1; 
+  }
+  .right-image {
+  position: absolute;   
+  top: 30px;               
+  left: -560px;         
+  width: 420px;        
+  height: auto;         
+  border-radius: 10px;
+  z-index: 1;
+}
+  .spacer1 {
+    height: 100vh;
+  }
+  .spacer2 {
+    height: 10vh;
+  }
+
+
+  .text{
+    position: absolute;
+    bottom: -400px;
+    left:900px;
+    text-align: left;
+    font-size: 35px;
+    color: rgb(207, 207, 207);
+    z-index: 1;
+    font-family: Impact;
+    background-color: transparent;
+
+  }
+ .text1{
+    position: absolute;
+    bottom: 0px;
+    left:900px;
+    text-align: left;
+    font-size: 35px;
+    color:rgb(207, 207, 207);
+    z-index: 1;
+    font-family: Impact;
+    background-color: transparent;
+  }
+.custom-cursor{
+    position:fixed;
+    width:42px;
+    height: 42px;
+    transform: scale(.45);
+    background: white;
+    border-radius: 50%;
+    mix-blend-mode: difference;
+    pointer-events: none;
+    z-index: 9999;
+    transition: transform 0.2s ease;
+}
+
+.custom-cursor.cursor-text{
+    transition: opaccity 0.2s ease;
+    white-space: scale(1);
+}
+
+.custom-cursor.grow{
+    transform: scale(1);
+}
+
+</style>
+</head>
+<body>
+
+<div class="custom-cursor"></div>
+
+<div class = "topnav">
+    <a class="active" href="griot.html"> home</a>
+    <a href="thearchive.html">the griot</a>
+    <a href="contribute.html">contribute</a>
+</div>
+
+  <div class="film-container">
+    <video autoplay>
+      <source src="gif1.mp4" type="video/mp4">
+    </video>
+</div>
+
+<div class="spacer1"></div>
+
+<div class="text">
+  *ABOUT US & THE MIND BEHIND GRIOT
+</div>
+
+<div class="typing-wrapper typing-left">
+  <h2 id="typingLeft"></h2>
+</div>
+
+
+<div class="typing-wrapper typing-right">
+  <img src="Iso/ISO.jpg" alt="Portrait" class="right-image">
+  <h2 id="typingRight"></h2>
+</div>
+
+<div class="spacer2"></div>
+<div class="scrolling-text">
+  <div class="scrolling-inner">
+      griot . site made by isonah . griot . site made by isonah .
+      </div>
+</div>
+
+<script>
+  const leftText =  "The Griot, founded in 2025, is a project of community preservation. It is a digital archive dedicated to resisting erasure and affirming existence through the curation of oral histories, cultural artifacts, and art by Black and African women. The Griot is not merely a record of the past; it is an assertion of the present and a blueprint for the future. It emerges in the tradition of Black thinkers who carved out space for radical self-definition. It is the child of an imagining, a vision of a digital future where Black narratives are not an afterthought but the foundation. This project seeks to resist external definition and affirm Black subjectivity on its own terms. We are living in a moment of aggressive historical erasure: books banned, curricula sanitized, truths buried under the weight of political convenience. To document is to resist. To preserve is to defy. The Griot stands against the erasure of Black women’s histories, against the silencing of their voices, against the forced forgetting demanded by white supremacy. The stories collected and protected by The Griot are for all people, for all women. They belong to the world, because the world has been shaped by Black hands, Black minds, and Black voices.";
+  const rightText = "Isonah Marlyse Ngouabe Dlodlo is a nationally recognized poet, photographer, child of a Cameroonian single mother and the creator of The Griot. A archival project that aims to actively resist the digital white washing of creation and story through the curation and preservation of black art, oral history and cultural artifacts. Her aim is to use actively use technology as an afrofuturist tool of preservation and cultural retention, completely disregarding the white and colonialist gaze.";
+
+  const leftWords = leftText.split(" ");
+  const rightWords = rightText.split(" ");
+
+  const leftTarget = document.getElementById("typingLeft");
+  const rightTarget = document.getElementById("typingRight");
+
+  const scrollPerWord = 5;
+
+  function updateText() {
+    
+    const rectLeft = leftTarget.getBoundingClientRect();
+    const scrollOffsetLeft = window.innerHeight - rectLeft.top;
+    let leftCount = Math.floor(scrollOffsetLeft / scrollPerWord);
+    leftCount = Math.max(0, Math.min(leftCount, leftWords.length));
+    leftTarget.textContent = leftWords.slice(0, leftCount).join(" ");
+
+    
+    const rectRight = rightTarget.getBoundingClientRect();
+    const scrollOffsetRight = window.innerHeight - rectRight.top;
+    let rightCount = Math.floor(scrollOffsetRight / scrollPerWord);
+    rightCount = Math.max(0, Math.min(rightCount, rightWords.length));
+    rightTarget.textContent = rightWords.slice(0, rightCount).join(" ");
+  }
+
+  window.addEventListener("scroll", updateText);
+  window.addEventListener("resize", updateText);
+  updateText();
+
+
+
+  
+  const cursor = document.querySelector('.custom-cursor');
+
+        document.addEventListener('mousemove', (e) =>{
+        cursor.style.left = `${e.clientX - 9}px`;
+        cursor.style.top = `${e.clientY - 9}px`;
+    });
+
+    const hoverTargets = document.querySelectorAll('.topnav a');
+
+    hoverTargets.forEach(el => {
+        el.addEventListener('mouseenter', () =>{
+            cursor.classList.add('grow');
+        });
+        el.addEventListener('mouseleave', () =>{
+            cursor.classList.remove('grow');
+        });
+    });
+
+</script>
+</body>
+</html>
